@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".QuoteActivity">
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:fontFamily="serif"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FF5722"
+        android:text="Random Quotes"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="............"
+        tools:text="Here the quote will be displayed"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="serif-monospace"
+        android:id="@+id/quote_tv"/>
+
+    <ImageView
+        android:id="@+id/next_quote"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="120dp"
+        android:layout_below="@+id/quote_tv"
+        android:src="@drawable/forward_black"
+        android:gravity="center">
+
+    </ImageView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="32dp">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:onClick="move_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Back"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="35dp"
+            android:layout_height="0dp"
+            />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:onClick="save_quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Save"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"/>
+
+</RelativeLayout>
